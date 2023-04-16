@@ -1,0 +1,86 @@
+* {
+    /* Paragraphy/SemiBold/Body - 16px */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+    /* identical to box height, or 200% */
+    text-transform: capitalize;
+}
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #0F0B33;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    flex-grow:0;
+    // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    .headerLogo {
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+        p {
+            content: pointer;
+            color: #FFFFFF;
+        }
+    }
+
+    .header-menu {
+        display: flex;
+        justify-content: space-between;
+        .menu {
+            margin-right: 100px;
+            .content {
+                display: flex;
+                width: fit-contents;
+                list-style-type: none;
+                li {
+                    position: relative;
+                    height: auto;
+                    color: #ADB9C7;
+                    cursor: pointer;
+                    margin: 0 20px;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: calc(100% - 20%);
+                        height: 1px;
+                        background-color: #1E50FF;
+                        opacity: 0;
+                        transition: opacity 0.3s ease-in-out;
+                    }
+
+                    &:hover {
+                        color: #FFFFFF;
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .button {
+            display: inline-flex;
+            align-items: center;
+            .connect-button {
+                color: #FFFFFF;
+                padding: 5px 20px;
+                opacity : 1;
+                border: 1px solid #1E50FF;
+                border-radius: 10px;
+                background: rgba(0, 0, 0, 0);
+            }
+        }
+    }
+}
+
+
+

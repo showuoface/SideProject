@@ -1,12 +1,12 @@
 import React from 'react';
 import './header.scss';
-import headerLogo from '../assets/image/header-logo.svg'
+import pandaLogo from '../assets/image/panda-logo.svg'
 
 function header() {
   return (
     <div className="header-container">
         <div className="headerLogo">
-            <img src={headerLogo} className="logo" alt="logo" />
+            <img src={pandaLogo} className="logo" alt="logo" />
             <p>
                 HomeWork NFT
             </p>

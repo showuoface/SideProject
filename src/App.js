@@ -253,11 +253,3 @@ function App() {
 }
 
 export default App;
-{/* <div className='sellTime'>
-<div className='icon'>
-    <img src={fireIcon} alt={fireIcon}></img>
-</div>
-<div className='time'>
-  {currentTime}
-</div>
-</div> */}

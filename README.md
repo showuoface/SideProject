@@ -8,3 +8,10 @@ This is an NFT (Non-Fungible Tokens) trading platform developed using the React 
 Additionally, the Swiper library has been incorporated for dynamic and interactive features.
 
 Only use CSS/HTML JS
+
+
+
+6/4 updata:
+layout
+component modify
+Router

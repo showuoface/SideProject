@@ -1,10 +1,10 @@
 import React from 'react';
 import './footer.scss';
 
-import pandaLogo from '../assets/image/panda-logo.svg';
-import facebook from '../assets/image/icon/facebook-icon.svg';
-import twitter from '../assets/image/icon/twitter-icon.svg';
-import instagram from '../assets/image/icon/instagram-icon.svg';
+import pandaLogo from '../../assets/image/panda-logo.svg';
+import facebook from '../../assets/image/icon/facebook-icon.svg';
+import twitter from '../../assets/image/icon/twitter-icon.svg';
+import instagram from '../../assets/image/icon/instagram-icon.svg';
 
 
 const resourceItems = ['Help Center', 'Platform Status', 'Partners', 'Gas-Free Marketplace', 'Blog'];
@@ -17,7 +17,7 @@ export const footer = () => {
       <div className='footer-detail'>
         <div className='detail'>
           <div className='title'>
-            <img src={pandaLogo} className="logo" alt="logo" />
+            <img src={pandaLogo} className="logo" alt="logo"/>
             <span>Panda NFT</span>
           </div>
           <div className='content'>
@@ -31,8 +31,8 @@ export const footer = () => {
           </div>
           <div className='content'>
             <ul>
-            {resourceItems.map(item => (
-              <li key={item}>{item}</li>
+            {resourceItems.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
             </ul>
           </div>
@@ -44,8 +44,8 @@ export const footer = () => {
           </div>
           <div className='content'>
             <ul>
-              {companyItems.map(item => (
-                <li key={item}>{item}</li>
+              {companyItems.map((item, index)=> (
+                <li key={index}>{item}</li>
               ))}
             </ul>
           </div>
@@ -60,8 +60,8 @@ export const footer = () => {
               2715 Ash Dr. San Jose, South Dakota 83475
             </div>
             <div className='icon'>
-              {contactIcon.map(item => (
-                <img src={item} alt='logo' />
+              {contactIcon.map((item, index) => (
+                <img key={index} src={item} alt='logo'/>
               ))}
             </div>
           </div>

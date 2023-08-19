@@ -1,44 +1,55 @@
 import React from 'react'
 import NFTImage from '../../assets/image/item/NFT-item.png';
+import {
+  FeaturedArtistContent,
+  FeaturedArtistTitleBox,
+  FeaturedArtistTitle,
+  FeaturedArtistButton,
+  FeaturedArtistCardItem,
+  FeaturedArtistItem,
+  FeaturedArtistImgBox,
+  FeaturedArtistPresonImg,
+  FeaturedArtistitemDetail
+} from './index.styled';
 
 const FeaturedItem = 
-  <div className='item'>
-    <div className='imgBox'>
+  <FeaturedArtistItem>
+    <FeaturedArtistImgBox>
       <img src={NFTImage} alt={NFTImage}/>
-      <div className='presonImg'>
+      <FeaturedArtistPresonImg>
         <img src={NFTImage} alt={NFTImage}/>
-      </div>
-    </div>
-    <div className='itemDetail'>
+      </FeaturedArtistPresonImg>
+    </FeaturedArtistImgBox>
+    <FeaturedArtistitemDetail>
       <div className='title'>
         <span className='name'>CryptoPunks</span>
         <div className='price'>
           818.7K
         </div>
       </div>
-    </div>
-  </div>;
+    </FeaturedArtistitemDetail>
+  </FeaturedArtistItem>;
 
 const FeaturedItems = Array.from({ length: 4 }, () => FeaturedItem);
 
 export default function FeatureedArtist() {
   return (
-    <div className='featuredArtist'>
-        <div className='title-box'>
-            <div className='title'>
+    <FeaturedArtistContent>
+        <FeaturedArtistTitleBox>
+            <FeaturedArtistTitle>
                 Featured Artist
-            </div>
-            <div className='button'>
+            </FeaturedArtistTitle>
+            <FeaturedArtistButton>
                 <button className='viewMore'>View More</button>
-            </div>
-        </div>
-        <div className='cardItem'>
+            </FeaturedArtistButton>
+        </FeaturedArtistTitleBox>
+        <FeaturedArtistCardItem>
             {FeaturedItems.map((item, index) => (
                 <div className="card" key={index}> 
                     {item} 
                 </div>
             ))}
-        </div>
-    </div>
+        </FeaturedArtistCardItem>
+    </FeaturedArtistContent>
   )
 }

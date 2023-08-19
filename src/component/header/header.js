@@ -1,34 +1,44 @@
 import React from 'react';
-import './header.scss';
 import pandaLogo from '../../assets/image/panda-logo.svg'
+import {
+    HeaderContainer,
+    HeaderLogo,
+    Logo,
+    HeaderMenu,
+    Menu,
+    Button,
+    Content,
+    ContentLi,
+    ConnectButton
+} from './header.styled';
 
 function header() {
   return (
-    <div className="header-container">
-        <div className="headerLogo">
+    <HeaderContainer>
+        <HeaderLogo>
             <img src={pandaLogo} className="logo" alt="logo"/>
-            <p>
+            <Logo>
                 HomeWork NFT
-            </p>
-        </div>
-        <div className='header-menu'>
-            <div className='menu'>
-                <ul className='content'>
-                    <li>Home</li>
-                    <li>Discover</li>
-                    <li>Docs</li>
-                    <li>Blog</li>
-                    <li>About Us</li>
-                    <li>Contact US</li>
-                </ul>
-            </div>
-            <div className='button'>
-                <button className='connect-button'>
+            </Logo>
+        </HeaderLogo>
+        <HeaderMenu>
+            <Menu>
+                <Content>
+                    <ContentLi>Home</ContentLi>
+                    <ContentLi>Discover</ContentLi>
+                    <ContentLi>Docs</ContentLi>
+                    <ContentLi>Blog</ContentLi>
+                    <ContentLi>About Us</ContentLi>
+                    <ContentLi>Contact US</ContentLi>
+                </Content>
+            </Menu>
+            <Button>
+                <ConnectButton>
                     Connect Wallet
-                </button>
-            </div>
-        </div>
-    </div>
+                </ConnectButton>
+            </Button>
+        </HeaderMenu>
+    </HeaderContainer>
   )
 }
 

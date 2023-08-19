@@ -1,17 +1,30 @@
 import React from 'react'
 import NFTImage from '../../assets/image/item/NFT-item.png';
+import {
+  LiveAuctionsContent,
+  LiveAuctionsContentTitleBox,
+  LiveAuctionsContentTitle,
+  LiveAuctionsContentButton,
+  LiveAuctionsContentCardItem,
+  LiveAuctionsContentCard,
+  LiveAuctionsContentItemDetail,
+  LiveAuctionsContentSubTitle,
+  LiveAuctionsContentTraining,
+  LiveAuctionsContentPersonDetail,
+  LiveAuctionsContentCurrent
+} from './index.styled';
 
 const NFTitem = 
   <div className='item'>
     <img src={NFTImage} alt={NFTImage}/>
-    <div className='itemDetail'>
-      <div className='subTitle'>
+    <LiveAuctionsContentItemDetail>
+      <LiveAuctionsContentSubTitle>
         <span>Hamlet Contemplates Contemplates Contemplates Contemplates</span>
-        <div className='training'>
+        <LiveAuctionsContentTraining>
           BSC
-        </div>
-      </div>
-      <div className='personDetail'>
+        </LiveAuctionsContentTraining>
+      </LiveAuctionsContentSubTitle>
+      <LiveAuctionsContentPersonDetail>
         <div className='name'>
           <div className='type'>
             Creator
@@ -20,39 +33,39 @@ const NFTitem =
             NULL
           </div>
         </div>
-        <div className='current'>
+        <LiveAuctionsContentCurrent>
           <div className='currentBid'>
             Current Bid
           </div>
           <div className='priceTotal'>
             4.89 eTH
           </div>
-        </div>
-      </div>
-    </div>
+        </LiveAuctionsContentCurrent>
+      </LiveAuctionsContentPersonDetail>
+    </LiveAuctionsContentItemDetail>
   </div>;
 
 const LiveItems = Array.from({ length: 3 }, () => NFTitem);
 
 export default function LiveAuctions() {
   return (
-    <div className='liveAuctions'>
-        <div className='title-box'>
-          <div className='title'>
+    <LiveAuctionsContent>
+        <LiveAuctionsContentTitleBox>
+          <LiveAuctionsContentTitle>
             Live Auctions
-          </div>
-          <div className='button'>
-            <button className='viewMore'>View More</button>
-          </div>
-        </div>
-        <div className='cardItem'>
+          </LiveAuctionsContentTitle>
+          <LiveAuctionsContentButton>
+            <button class="viewMore">View More</button>
+          </LiveAuctionsContentButton>
+        </LiveAuctionsContentTitleBox>
+        <LiveAuctionsContentCardItem>
           {LiveItems.map((item, index) => (
-            <div className="card" key={index}> 
+            <LiveAuctionsContentCard key={index}> 
               {item} 
 
-            </div>
+            </LiveAuctionsContentCard>
           ))}
-        </div>
-      </div>
+        </LiveAuctionsContentCardItem>
+      </LiveAuctionsContent>
   )
 }

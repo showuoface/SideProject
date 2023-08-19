@@ -1,29 +1,37 @@
 import React from 'react'
 import createAndSell from '../../assets/image/icon/create-and-sell-icon.svg';
+import {
+  CreateAndSellContent,
+  CreateAndSellTitle,
+  CreateAndSellCartItem,
+  CreateAndSellItem,
+  CreateAndSellItemSubTitle,
+  CreateAndSellItemContent,
+} from './index.styled';
 
 const titleItems = ['Set up your wallet', 'Add your NFTs', 'List them for sale'];
 
 const createAndSellItems = titleItems.map((item, index) =>
-  <div className='item' key={index}>
+  <CreateAndSellItem key={index}>
     <img src={createAndSell} alt={createAndSell}/>
-    <div className='subTitle' >
+    <CreateAndSellItemSubTitle>
      {item}
-    </div>
-    <div className='content'>
+    </CreateAndSellItemSubTitle>
+    <CreateAndSellItemContent>
       Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner.
-    </div>
-  </div>
+    </CreateAndSellItemContent>
+  </CreateAndSellItem>
 )
 
 export default function CreateAndSell() {
   return (
-    <div className='createAndSell'>
-        <div className='title'>
+    <CreateAndSellContent>
+        <CreateAndSellTitle>
           Create and sell your NFTs
-        </div>
-        <div className='cartItem'>
+        </CreateAndSellTitle>
+        <CreateAndSellCartItem>
           {createAndSellItems}
-        </div>
-  </div>
+        </CreateAndSellCartItem>
+    </CreateAndSellContent>
   )
 }

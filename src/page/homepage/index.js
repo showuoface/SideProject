@@ -7,18 +7,22 @@ import LiveAuctions from './liveAuctions';
 import FeatureedArtist from './featureedArtist';
 import Hot from './hot';
 import CreateYourOwn from './createYourOwn';
+import Layout from '../../layout';
+import { App } from './index.styled'
 
 
 export default function HomePage() {
   return (
-    <div className="App">
-      <MainBanner />
-      <MiniBanner />
-      <CreateAndSell />
-      <LiveAuctions />
-      <FeatureedArtist />
-      <Hot />
-      <CreateYourOwn />
-    </div>
+    <Layout>
+      <div className="App">
+        <MainBanner />
+        <MiniBanner />
+        <CreateAndSell />
+        <LiveAuctions />
+        <FeatureedArtist />
+        <Hot />
+        <CreateYourOwn />
+      </div>
+    </Layout>
   );
 }

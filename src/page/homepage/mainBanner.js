@@ -1,37 +1,53 @@
 import React, { useRef, useEffect } from 'react';
 import NFTImage from '../../assets/image/item/NFT-item.png';
-import Swiper from 'swiper';
-import 'swiper/swiper.min.css';
+import SwiperCore from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { 
+  MainBannerContent,
+  TitleBox,
+  Title,
+  SubTitle,
+  Button,
+  SwiperContainer,
+  ItemDetail,
+  ItemSubTitle,
+  ItemSpan,
+  Training,
+  PersonDetail,
+  ItemType,
+  CurrentBid,
+  ItemImg
+} from './index.styled';
 
 const NFTitem = 
   <div className='item'>
-    <img src={NFTImage} alt={NFTImage}/>
-    <div className='itemDetail'>
-      <div className='subTitle'>
-        <span>Hamlet Contemplates Contemplates Contemplates Contemplates</span>
-        <div className='training'>
+    <ItemImg src={NFTImage} alt={NFTImage}/>
+    <ItemDetail>
+      <ItemSubTitle>
+        <ItemSpan>Hamlet Contemplates Contemplates Contemplates Contemplates</ItemSpan>
+        <Training>
           BSC
-        </div>
-      </div>
-      <div className='personDetail'>
+        </Training>
+      </ItemSubTitle>
+      <PersonDetail>
         <div className='name'>
-          <div className='type'>
+          <ItemType>
             Creator
-          </div>
+          </ItemType>
           <div className='name'>
             NULL
           </div>
         </div>
         <div className='current'>
-          <div className='currentBid'>
+          <CurrentBid>
             Current Bid
-          </div>
+          </CurrentBid>
           <div className='priceTotal'>
             4.89 eTH
           </div>
         </div>
-      </div>
-    </div>
+      </PersonDetail>
+    </ItemDetail>
   </div>;
 
 const NFTitems = Array.from({ length: 5 }, () => NFTitem);
@@ -40,38 +56,38 @@ function MainBanner() {
     const swiperRef = useRef(null);
 
     useEffect(() => {
-        const swiper = new Swiper(swiperRef.current, {
-        slidesPerView: 'auto',
-        spaceBetween: 60,
-        centeredSlides: true,
+        const swiper = new SwiperCore(swiperRef.current, {
+          slidesPerView: 'auto',
+          spaceBetween: 60,
+          centeredSlides: true
         });
 
         return () => {
-        swiper.destroy(true, true);
+          swiper.destroy(true, true);
         };
     }, []);
 
     return (
-      <div className='mainBanner'>
-          <div className='title-box'>
-            <div className='title'>
+      <MainBannerContent>
+          <TitleBox>
+            <Title>
                 Discover a New Era of Crypto Currency
-            </div>
-            <div className='subTitle'>
+            </Title>
+            <SubTitle>
                 Panda NFT is the primier marketplace for NFT, which are digital items you can truly own. Digital items have existed for a long time, but never like this.
-            </div>
-            <button className='get-started'>Get Started</button>
-          </div>
-          <div className="swiper-container" ref={swiperRef}>
-            <div className="swiper-wrapper">
+            </SubTitle>
+            <Button>Get Started</Button>
+          </TitleBox>
+          <SwiperContainer>
+            <Swiper ref={swiperRef}>
               {NFTitems.map((item, index) => (
-                <div className="swiper-slide" key={index}> 
+                <SwiperSlide key={index}> 
                   {item} 
-                </div>
+                </SwiperSlide>
               ))}
-            </div>
-          </div>
-      </div>
+            </Swiper>
+          </SwiperContainer>
+      </MainBannerContent>
     )  
 }
 

@@ -4,10 +4,10 @@ import Footer from "../component/footer/footer";
 
 export default function App({ children }) {
   return (
-    <div>
+    <>
       <Header />
-      <div className="container">{children}</div>
+      {children}
       <Footer />
-    </div>
+    </>
   );
 }

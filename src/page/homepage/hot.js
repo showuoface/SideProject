@@ -1,40 +1,55 @@
 import React from 'react'
 import NFTImage from '../../assets/image/item/NFT-item.png';
+import {
+  HotTitleBox,
+  HotTitle,
+  HotTitleButton,
+  HotCardItem,
+  HotCard,
+  HotImgBox,
+  HotItemDetail,
+  HotSubTitle,
+  HotTraining,
+  HotPersonDetail,
+  HotType,
+  HotCurrentBid,
+  HotButton,
+} from './index.styled';
 
 const hotNavbar = ['Music', 'Art', 'Sports', 'Virtual', 'Videos', 'More'];
 
 const HotItem = 
   <div className='item'>
-    <div className='imgBox'>
+    <HotImgBox>
       <img src={NFTImage} alt={NFTImage}/>
       <button>Place A Bid</button>
-    </div>
-    <div className='itemDetail'>
-      <div className='subTitle'>
+    </HotImgBox>
+    <HotItemDetail>
+      <HotSubTitle>
         <span>Hamlet Contemplates Contemplates Contemplates Contemplates</span>
-        <div className='training'>
+        <HotTraining>
           BSC
-        </div>
-      </div>
-      <div className='personDetail'>
+        </HotTraining>
+      </HotSubTitle>
+      <HotPersonDetail>
         <div className='name'>
-          <div className='type'>
+          <HotType>
             Creator
-          </div>
+          </HotType>
           <div className='name'>
             NULL
           </div>
         </div>
         <div className='current'>
-          <div className='currentBid'>
+          <HotCurrentBid>
             Current Bid
-          </div>
+          </HotCurrentBid>
           <div className='priceTotal'>
             4.89 eTH
           </div>
         </div>
-      </div>
-    </div>
+      </HotPersonDetail>
+    </HotItemDetail>
   </div>;
 
 const HotItems =  Array.from({ length: 6 }, () => HotItem);
@@ -42,28 +57,28 @@ const HotItems =  Array.from({ length: 6 }, () => HotItem);
 export default function Hot() {
   return (
     <div className='hot'>
-        <div className='title-box'>
-          <div className='title'>
+        <HotTitleBox>
+          <HotTitle>
             Hot NFTs
-          </div>
-          <div className='button'>
+          </HotTitle>
+          <HotTitleButton>
             {hotNavbar.map((item, index) =>(
               <button className={item} key={index}>
                 {item}
               </button>
             ))}
-          </div>
-        </div>
-        <div className='cardItem'>
+          </HotTitleButton>
+        </HotTitleBox>
+        <HotCardItem>
           {HotItems.map((item, index) => (
-            <div className="card" key={index}> 
+            <HotCard key={index}> 
               {item} 
-            </div>
+            </HotCard>
           ))}
-        </div>
-        <div className='button'>
+        </HotCardItem>
+        <HotButton>
           <button className='viewMore'>View More</button>
-        </div>
+        </HotButton>
       </div>
   )
 }

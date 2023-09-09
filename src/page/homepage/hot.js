@@ -62,12 +62,24 @@ export default function Hot() {
             Hot NFTs
           </HotTitle>
           <HotTitleButton>
-            {hotNavbar.map((item, index) =>(
-              <button className={item} key={index}>
-                {item}
-              </button>
-            ))}
+            <div className='buttonGroup'>
+              {hotNavbar.map((item, index) =>(
+                <button className={item} key={index}>
+                  {item}
+                </button>
+              ))}
+            </div>
+            <div className='selectGroup'>
+              <select name='isSelect'>
+                {hotNavbar.map((item, index) =>(
+                  <option className={item} key={index}>
+                    {item}
+                  </option>
+                ))}
+              </select>
+            </div>
           </HotTitleButton>
+
         </HotTitleBox>
         <HotCardItem>
           {HotItems.map((item, index) => (

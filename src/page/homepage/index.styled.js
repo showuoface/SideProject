@@ -6,30 +6,45 @@ export const App = styled.div`
     flex-direction: column;
     background-color: #02050E;
     color: white;
-    padding: 50px 200px;
+    padding: 50px 0;
 `;
 
 export const MainBannerContent = styled.div`
     display: flex;
     margin-bottom: 50px;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
 `;
 
 export const TitleBox = styled.div`
     margin-top: 40px;
+    @media (max-width: 767px) {
+        margin-top: 0;
+    }
 `;
 
 export const Title = styled.div`
-    width: 631px;
-    height: 160px;
     font-weight: 700;
     font-size: 64px;
     line-height: 80px;
+    white-space: pre-wrap; // 換行，但避免不必要的換行
+    word-wrap: break-word; // 於必要時斷字
     color: #FFFFFF;
+
+    @media (max-width: 1024px) and (min-width: 768px) {
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 8px 30px;
+        font-size: 32px;
+        line-height: 40px;
+    }
 `;
 
 export const SubTitle = styled.div`
-    width: 520px;
-    height: 96px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -37,6 +52,16 @@ export const SubTitle = styled.div`
     line-height: 32px;
     color: #ADB9C7;
     margin: 50px 0;
+
+    @media (max-width: 767px) {
+        font-size: 14px;
+        line-height: 28px;
+        margin: 30px 0;
+    }
+
+    @media (max-width: 767px) {
+        padding: 8px 30px;
+    }
 `;
 
 export const Button = styled.button`
@@ -46,6 +71,7 @@ export const Button = styled.button`
     border-radius: 16px;
     padding:  10px 40px;
     border: none;
+    margin: 0 auto;
 `;
 export const SwiperContainer = styled.div`
     width: 100%;
@@ -63,10 +89,13 @@ export const SwiperContainer = styled.div`
         background-color: #272D37;
         text-align: center;
         font-size: 18px;
-        width: fit-content !important;
         position: relative;
         text-align: center;
         border-radius: 16px;
+    }
+
+    @media (max-width: 1024px) {
+        margin-top: 30px;
     }
 `;
 
@@ -123,8 +152,6 @@ export const CurrentBid = styled.div`
 export const ItemImg = styled.img`
     max-width: 350px;
     max-height: 400px;
-    width: 100%;
-    height: auto;
     display: block;
     margin: 0 auto;
     border-radius: 16px;
@@ -158,26 +185,30 @@ export const CreateAndSellTitle = styled.div`
 
 export const CreateAndSellCartItem = styled.div`
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
     justify-content: space-between;
     width: 100%;
-    justify-content: space-between;
     margin: 100px 0;
     gap:15px;
+    @media (max-width: 1024px){
+        justify-content: center;
+    }
 `;
 
 export const CreateAndSellItem = styled.div`
     background: #272D37;
-    padding: 5%;
+    padding: 60px;
     border-radius: 16px;
     img {
-    margin-bottom: 30px;
+        margin-bottom: 30px;
     }
     &:hover {
-        background-image: linear-gradient(to bottom right, #ffffff, #000000);
-        .content {
-            color: #E7ECF2;
-        }
+        cursor: pointer;
+        box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                    -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+                    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+                    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
     }
 `;
 
@@ -238,17 +269,18 @@ export const LiveAuctionsContentButton = styled.div`
 export const LiveAuctionsContentCardItem = styled.div`
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     gap:10px;
 `;
 
 export const LiveAuctionsContentCard = styled.div`
+    max-width: 320px;
     padding: 2%;
     background-color: #272D37;
     text-align: center;
     font-size: 18px;
-    width: fit-content;
     position: relative;
     text-align: center;
     border-radius: 16px;
@@ -261,7 +293,11 @@ export const LiveAuctionsContentCard = styled.div`
         margin: 0 auto;
         border-radius: 16px;
         cursor: pointer;
-      }
+    }
+
+    @media (max-width: 1024px) {
+        margin: 0 auto;
+    }
 `;
 
 export const LiveAuctionsContentItemDetail = styled.div`
@@ -352,15 +388,24 @@ export const FeaturedArtistButton = styled.div`
 
 export const FeaturedArtistCardItem = styled.div`
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     gap:20px;
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+`;
+
+export const FeaturedArtistCard = styled.div`
+    max-width: 300px;
 `;
 
 export const FeaturedArtistItem = styled.div`
     background-color: #272D37;
     border-radius: 16px;
     padding: 10px;
+    cursor: pointer;
 `;
 
 export const FeaturedArtistImgBox = styled.div`
@@ -423,15 +468,15 @@ export const CreateYourOwnTitle = styled.div`
     text-transform: capitalize;
     text-align: center;
     color: #FFFFFF;
+    margin: 0 auto;
     margin-bottom: 30px;
 `;
 
 export const CreateYourOwnInside = styled.div`
+    width: fit-content;
     display: flex;
-    text-transform: capitalize;
     font-weight: 400;
     font-size: 16px;
-    line-height: 32px;
     text-align: center;
     margin: 0 auto;
     max-width: 650px;
@@ -448,10 +493,7 @@ export const CreateYourOwnButton = styled.div`
         padding: 10px 30px;
         font-weight: 600;
         font-size: 16px;
-        line-height: 32px;
-        text-transform: capitalize;
         order: 0;
-        flex-grow: 0;
     }
 `;
 
@@ -475,22 +517,49 @@ export const HotTitle = styled.div`
 
 export const HotTitleButton = styled.div`
     display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    height: 50px;
-    margin:0;
-    button {
-        width: fit-content;
-        color: #FFFFFF;
-        padding: 0 30px;
-        opacity : 1;
-        border: 1px solid #1E50FF;
-        border-radius: 10px;
-        background: rgba(0, 0, 0, 0);
-        &:hover {
-            background: #1E50FF;
+    .buttonGroup {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        height: 50px;
+        margin:0;
+        button {
+            width: fit-content;
+            color: #FFFFFF;
+            padding: 0 30px;
+            opacity : 1;
+            border: 1px solid #1E50FF;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0);
+            &:hover {
+                background: #1E50FF;
+            }
         }
     }
+    .selectGroup {
+        display: none;
+        select {
+            outline: none; /* 移除輪廓 */
+            background: black;
+            border-radius: 16px;
+            border: 1px solid #1E50FF;
+            &:hover {
+                background: #1E50FF;
+            }
+        }
+        select:focus {
+            border: 2px solid blue;
+        }
+    }
+    @media (max-width: 1024px) {
+        .buttonGroup {
+            display: none;
+        }
+        .selectGroup {
+            display: flex;
+        }
+    }
+    
 `;
 
 export const HotCardItem = styled.div`
@@ -508,9 +577,7 @@ export const HotCard = styled.div`
     background-color: #272D37;
     text-align: center;
     font-size: 18px;
-    position: relative;
     border-radius: 16px;
-    width: fit-content;
 `;
 
 export const HotImgBox = styled.div`
@@ -553,7 +620,7 @@ export const HotImgBox = styled.div`
     }
     &:hover {
         &::after {
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 16px;
         }
 

@@ -6,6 +6,7 @@ import {
   FeaturedArtistTitle,
   FeaturedArtistButton,
   FeaturedArtistCardItem,
+  FeaturedArtistCard,
   FeaturedArtistItem,
   FeaturedArtistImgBox,
   FeaturedArtistPresonImg,
@@ -45,9 +46,9 @@ export default function FeatureedArtist() {
         </FeaturedArtistTitleBox>
         <FeaturedArtistCardItem>
             {FeaturedItems.map((item, index) => (
-                <div className="card" key={index}> 
+                <FeaturedArtistCard key={index}> 
                     {item} 
-                </div>
+                </FeaturedArtistCard>
             ))}
         </FeaturedArtistCardItem>
     </FeaturedArtistContent>

@@ -14,7 +14,7 @@ import { App } from './index.styled'
 export default function HomePage() {
   return (
     <Layout>
-      <div className="App">
+      <App>
         <MainBanner />
         <MiniBanner />
         <CreateAndSell />
@@ -22,7 +22,7 @@ export default function HomePage() {
         <FeatureedArtist />
         <Hot />
         <CreateYourOwn />
-      </div>
+      </App>
     </Layout>
   );
 }

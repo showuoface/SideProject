@@ -6,7 +6,6 @@ export const HeaderContainer = styled.header`
     justify-content: space-between;
     background-color: #02050E;
     align-items: center;
-    padding: 20px 200px;
     gap: 10px;
     flex-grow:0;
 `;
@@ -15,20 +14,44 @@ export const HeaderLogo = styled.div`
     display: flex;
     gap: 10px;
     cursor: pointer;
+    @media (max-width: 1024px) and (min-width: 768px){
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    @media (max-width: 768px) {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
 `;
 
 export const Logo = styled.p`
     content: pointer;
     color: #FFFFFF;
+    @media (max-width: 1024px) and (min-width: 768px){
+        font-size: 40px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
 `;
 
 export const HeaderMenu = styled.div`
     display: flex;
     justify-content: space-between;
-`;
-
-export const Menu = styled.div`
-    margin-right: 100px;
+    @media (max-width: 1024px) {
+        display: none;
+    }
 `;
 
 export const Button = styled.div`
@@ -38,7 +61,7 @@ export const Button = styled.div`
 
 export const Content = styled.ul`
     display: flex;
-    width: fit-contents;
+    padding: 0;
     list-style-type: none;
 `;
 

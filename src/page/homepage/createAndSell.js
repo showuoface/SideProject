@@ -26,12 +26,12 @@ const createAndSellItems = titleItems.map((item, index) =>
 export default function CreateAndSell() {
   return (
     <CreateAndSellContent>
-        <CreateAndSellTitle>
-          Create and sell your NFTs
-        </CreateAndSellTitle>
-        <CreateAndSellCartItem>
-          {createAndSellItems}
-        </CreateAndSellCartItem>
+      <CreateAndSellTitle>
+        Create and sell your NFTs
+      </CreateAndSellTitle>
+      <CreateAndSellCartItem>
+        {createAndSellItems}
+      </CreateAndSellCartItem>
     </CreateAndSellContent>
   )
 }

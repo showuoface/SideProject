@@ -5,7 +5,6 @@ import {
     HeaderLogo,
     Logo,
     HeaderMenu,
-    Menu,
     Button,
     Content,
     ContentLi,
@@ -22,7 +21,7 @@ function header() {
             </Logo>
         </HeaderLogo>
         <HeaderMenu>
-            <Menu>
+            <div>
                 <Content>
                     <ContentLi>Home</ContentLi>
                     <ContentLi>Discover</ContentLi>
@@ -31,7 +30,7 @@ function header() {
                     <ContentLi>About Us</ContentLi>
                     <ContentLi>Contact US</ContentLi>
                 </Content>
-            </Menu>
+            </div>
             <Button>
                 <ConnectButton>
                     Connect Wallet

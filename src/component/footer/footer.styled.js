@@ -5,7 +5,6 @@ export const FooterContainer = styled.footer`
     flex-direction: column;
     background-color: #02050E;
     align-items: flex-start;
-    padding: 50px 200px;
     gap: 10px;
     flex-grow:0;
 `;
@@ -13,12 +12,15 @@ export const FooterContainer = styled.footer`
 export const FooterDetail = styled.div`
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     justify-content: space-between;
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
 `;
 
 export const Detail = styled.div`
     max-width: 300px;
-    margin-right: 20px;
 `;
 
 export const Title = styled.div`
@@ -33,8 +35,12 @@ export const Content = styled.div`
 `;
 
 export const CopyRight = styled.div`
-    justify-content: flex-start;
     color: #ffff;
+    @media (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 `;
 
 export const ResourceUl = styled.ul`

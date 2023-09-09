@@ -58,8 +58,7 @@ function MainBanner() {
     useEffect(() => {
         const swiper = new SwiperCore(swiperRef.current, {
           slidesPerView: 'auto',
-          spaceBetween: 60,
-          centeredSlides: true
+          spaceBetween: 60
         });
 
         return () => {
@@ -69,24 +68,24 @@ function MainBanner() {
 
     return (
       <MainBannerContent>
-          <TitleBox>
-            <Title>
-                Discover a New Era of Crypto Currency
-            </Title>
-            <SubTitle>
-                Panda NFT is the primier marketplace for NFT, which are digital items you can truly own. Digital items have existed for a long time, but never like this.
-            </SubTitle>
-            <Button>Get Started</Button>
-          </TitleBox>
-          <SwiperContainer>
-            <Swiper ref={swiperRef}>
-              {NFTitems.map((item, index) => (
-                <SwiperSlide key={index}> 
-                  {item} 
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </SwiperContainer>
+        <TitleBox>
+          <Title>
+              Discover a New Era of Crypto Currency
+          </Title>
+          <SubTitle>
+              Panda NFT is the primier marketplace for NFT, which are digital items you can truly own. Digital items have existed for a long time, but never like this.
+          </SubTitle>
+          <Button>Get Started</Button>
+        </TitleBox>
+        <SwiperContainer>
+          <Swiper ref={swiperRef}>
+            {NFTitems.map((item, index) => (
+              <SwiperSlide key={index}> 
+                {item} 
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </SwiperContainer>
       </MainBannerContent>
     )  
 }

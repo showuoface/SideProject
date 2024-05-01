@@ -55,7 +55,7 @@ export default function LiveAuctions() {
             Live Auctions
           </LiveAuctionsContentTitle>
           <LiveAuctionsContentButton>
-            <button class="viewMore">View More</button>
+            <button className="viewMore">View More</button>
           </LiveAuctionsContentButton>
         </LiveAuctionsContentTitleBox>
         <LiveAuctionsContentCardItem>

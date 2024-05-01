@@ -58,7 +58,9 @@ function MainBanner() {
     useEffect(() => {
         const swiper = new SwiperCore(swiperRef.current, {
           slidesPerView: 'auto',
-          spaceBetween: 60
+          spaceBetween: 60,
+          freeMode: true, 
+          centeredSlides: true,
         });
 
         return () => {

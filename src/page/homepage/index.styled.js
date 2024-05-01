@@ -19,14 +19,22 @@ export const MainBannerContent = styled.div`
 
 export const TitleBox = styled.div`
     margin-top: 40px;
+    @media (max-width: 1024px) and (min-width: 767px) {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr 1fr;  /* 分配兩列，第一列自適應，第二列自動大小 */
+        grid-template-areas: "content button";  /* 指定元素位置 */
+    }
+
     @media (max-width: 767px) {
         margin-top: 0;
+        flex-direction: column;
     }
 `;
 
 export const Title = styled.div`
     font-weight: 700;
-    font-size: 64px;
+    font-size: 62px;
     line-height: 80px;
     white-space: pre-wrap; // 換行，但避免不必要的換行
     word-wrap: break-word; // 於必要時斷字
@@ -39,7 +47,7 @@ export const Title = styled.div`
 
     @media (max-width: 767px) {
         padding: 8px 30px;
-        font-size: 32px;
+        font-size: 48px;
         line-height: 40px;
     }
 `;
@@ -181,25 +189,37 @@ export const CreateAndSellTitle = styled.div`
     text-align: center;
     text-transform: capitalize;
     color: #FFFFFF;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 export const CreateAndSellCartItem = styled.div`
     display: flex;
-    flex-wrap: wrap;
     text-align: center;
     justify-content: space-between;
     width: 100%;
+    height: auto;
     margin: 100px 0;
     gap:15px;
     @media (max-width: 1024px){
         justify-content: center;
     }
+    @media (max-width: 768px) {
+        align-items: center;
+        flex-direction: column;
+    }
 `;
 
 export const CreateAndSellItem = styled.div`
     background: #272D37;
-    padding: 60px;
     border-radius: 16px;
+    width: 33%;
+    height: auto;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     img {
         margin-bottom: 30px;
     }
@@ -209,6 +229,9 @@ export const CreateAndSellItem = styled.div`
                     -4px -4px 6px 0 rgba(116, 125, 136, .5), 
                     inset -4px -4px 6px 0 rgba(255,255,255,.2),
                     inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+    }
+    @media (max-width: 768px) {
+        width: 80%
     }
 `;
 
@@ -223,6 +246,7 @@ export const CreateAndSellItemSubTitle = styled.div`
 
 export const CreateAndSellItemContent = styled.div`
     width: 260px;
+    height: auto;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
@@ -272,12 +296,16 @@ export const LiveAuctionsContentCardItem = styled.div`
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    gap:10px;
+    gap:20px;
+    @media (max-width: 684px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const LiveAuctionsContentCard = styled.div`
-    max-width: 320px;
-    padding: 2%;
+    width: 28%;
+    padding: 5px;
     background-color: #272D37;
     text-align: center;
     font-size: 18px;
@@ -294,16 +322,15 @@ export const LiveAuctionsContentCard = styled.div`
         border-radius: 16px;
         cursor: pointer;
     }
-
-    @media (max-width: 1024px) {
-        margin: 0 auto;
+    @media (max-width: 684px) {
+        width: fit-content;
     }
 `;
 
 export const LiveAuctionsContentItemDetail = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 35px;
+    margin: 35px 20px 0 20px; 
 `;
 
 export const LiveAuctionsContentSubTitle = styled.div`
@@ -422,11 +449,16 @@ export const FeaturedArtistPresonImg = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, 30%);
+    transition: transform 0.3s ease;
     img {
         width: 100%;
         height: 100%;
         border-radius: 100%;
         border: 2px solid #FFFFFF;
+        object-fit: cover;
+    }
+    &:hover {
+        transform: translate(-50%, 30%) scale(1.2);
     }
 `;
 
@@ -563,21 +595,33 @@ export const HotTitleButton = styled.div`
 `;
 
 export const HotCardItem = styled.div`
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+    @media (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
 `;
 
 export const HotCard = styled.div`
-    flex: 1 0 32%;
     box-sizing: border-box;
-    max-width: 32%;
+    width: 30%;
     padding: 1% 1%;
     background-color: #272D37;
     text-align: center;
     font-size: 18px;
     border-radius: 16px;
+    @media (max-width: 1024px) {
+        width: 30%;
+    }
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 `;
 
 export const HotImgBox = styled.div`

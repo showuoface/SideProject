@@ -15,7 +15,7 @@ export const FooterDetail = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     @media (max-width: 768px) {
-        justify-content: center;
+        justify-content: space-around;
     }
 `;
 

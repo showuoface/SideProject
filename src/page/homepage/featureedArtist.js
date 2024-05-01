@@ -31,7 +31,7 @@ const FeaturedItem =
     </FeaturedArtistitemDetail>
   </FeaturedArtistItem>;
 
-const FeaturedItems = Array.from({ length: 4 }, () => FeaturedItem);
+const FeaturedItems = Array.from({ length: 3 }, () => FeaturedItem);
 
 export default function FeatureedArtist() {
   return (

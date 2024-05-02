@@ -8,6 +8,14 @@ export const HeaderContainer = styled.header`
     align-items: center;
     gap: 10px;
     flex-grow:0;
+    div:nth-child(3) {
+        display: none;
+    }
+    @media (max-width: 1024px) {
+        div:nth-child(3) {
+            display: flex;
+        }
+    }
 `;
 
 export const HeaderLogo = styled.div`

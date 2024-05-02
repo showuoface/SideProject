@@ -1,6 +1,5 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import NFTImage from '../../assets/image/item/NFT-item.png';
-import SwiperCore from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { 
   MainBannerContent,
@@ -18,6 +17,10 @@ import {
   CurrentBid,
   ItemImg
 } from './index.styled';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import { Pagination, EffectCoverflow } from 'swiper/modules';
 
 const NFTitem = 
   <div className='item'>
@@ -53,21 +56,6 @@ const NFTitem =
 const NFTitems = Array.from({ length: 5 }, () => NFTitem);
 
 function MainBanner() {
-    const swiperRef = useRef(null);
-
-    useEffect(() => {
-        const swiper = new SwiperCore(swiperRef.current, {
-          slidesPerView: 'auto',
-          spaceBetween: 60,
-          freeMode: true, 
-          centeredSlides: true,
-        });
-
-        return () => {
-          swiper.destroy(true, true);
-        };
-    }, []);
-
     return (
       <MainBannerContent>
         <TitleBox>
@@ -80,7 +68,22 @@ function MainBanner() {
           <Button>Get Started</Button>
         </TitleBox>
         <SwiperContainer>
-          <Swiper ref={swiperRef}>
+          <Swiper
+            slidesPerView= {1.5}
+            spaceBetween= {30}
+            loop= {true}
+            centeredSlides= {true}
+            modules= {[Pagination, EffectCoverflow]}
+            effect= "coverflow"
+            coverflowEffect= {{
+              rotate: 0,
+              stretch: 1,
+              depth: 150,
+              modifier: 2,
+              slideShadows: true 
+            }}
+            className="mySwiper"
+          >
             {NFTitems.map((item, index) => (
               <SwiperSlide key={index}> 
                 {item} 

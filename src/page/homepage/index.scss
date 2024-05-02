@@ -8,3 +8,58 @@
   /* identical to box height, or 200% */
   text-transform: capitalize;
 }
+.swiper-slide-active {
+  .item {
+    div {
+      display: flex !important;
+    }
+  }
+  display: block !important;
+}
+
+.bm-burger-button {
+  display: none;
+  position: relative;
+  @media (max-width: 1024px) {
+    display: flex;
+  }
+  img,
+  button {
+    width: 50px !important;
+    height: 50px !important;
+    right: 0 !important;
+    @media (max-width: 786px) {
+      width: 40px !important;
+      height: 40px !important;
+    }
+  }
+}
+
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+.bm-menu-wrap {
+  top: 0;
+  width: 60% !important;
+  .bm-cross-button {
+    img {
+      width: 24px;
+    }
+  }
+}
+
+.bm-menu {
+  width: 100%;
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  .bm-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    li {
+      font-size: 30px !important;
+    }
+  }
+}

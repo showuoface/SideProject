@@ -19,12 +19,12 @@ export const MainBannerContent = styled.div`
 
 export const TitleBox = styled.div`
     margin-top: 40px;
-    @media (max-width: 1024px) and (min-width: 767px) {
-        display: grid;
-        text-align: center;
-        grid-template-columns: 1fr 1fr;  /* 分配兩列，第一列自適應，第二列自動大小 */
-        grid-template-areas: "content button";  /* 指定元素位置 */
-    }
+    // @media (max-width: 1024px) and (min-width: 767px) {
+    //     display: grid;
+    //     text-align: center;
+    //     grid-template-columns: 1fr 1fr;  /* 分配兩列，第一列自適應，第二列自動大小 */
+    //     grid-template-areas: "content button";  /* 指定元素位置 */
+    // }
 
     @media (max-width: 767px) {
         margin-top: 0;
@@ -45,7 +45,7 @@ export const Title = styled.div`
         line-height: 60px;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 1024px) {
         padding: 8px 30px;
         font-size: 48px;
         line-height: 40px;
@@ -61,13 +61,13 @@ export const SubTitle = styled.div`
     color: #ADB9C7;
     margin: 50px 0;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1024px) {
         font-size: 14px;
         line-height: 28px;
         margin: 30px 0;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 1024px) {
         padding: 8px 30px;
     }
 `;
@@ -87,19 +87,19 @@ export const SwiperContainer = styled.div`
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    .swiper-wrapper {
-        width: 100%;
-        height: 100%;
-        display: flex;
-    }
     .swiper-slide {
-        padding: 3% 2%;
         background-color: #272D37;
         text-align: center;
         font-size: 18px;
         position: relative;
         text-align: center;
         border-radius: 16px;
+        .item {
+            padding: 10px;
+            img {
+                width: 100%;
+            }
+        }
     }
 
     @media (max-width: 1024px) {
@@ -111,6 +111,7 @@ export const ItemDetail = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 35px;
+    display: none;
 `;
 
 export const ItemSubTitle = styled.div`
@@ -169,8 +170,35 @@ export const ItemImg = styled.img`
 // MiniBanner
 export const MiniBannerContent = styled.div`
     margin: 150px 0;
-    img {
-        max-width: 100%;
+    display: flex;
+    .item {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        img {
+            flex: 1 1 20%;
+            max-width: 20%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .item img {
+            flex: 1 1 33.33%;
+            max-width: 33.33%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .item img {
+            flex: 1 1 50%;
+            max-width: 50%;
+        }
     }
 `;
 
@@ -313,8 +341,6 @@ export const LiveAuctionsContentCard = styled.div`
     text-align: center;
     border-radius: 16px;
     img {
-        max-width: 400px;
-        max-height: 500px;
         width: 100%;
         height: auto;
         display: block;
@@ -323,7 +349,7 @@ export const LiveAuctionsContentCard = styled.div`
         cursor: pointer;
     }
     @media (max-width: 684px) {
-        width: fit-content;
+        width: 90%;
     }
 `;
 

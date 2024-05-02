@@ -10,6 +10,12 @@ import {
     ContentLi,
     ConnectButton
 } from './header.styled';
+import { slide as Menu } from 'react-burger-menu';
+import HamburgerIcon from '../../assets/image/icon/menu.png';
+import CrossIcon from '../../assets/image/icon/cross.png';
+
+const CustomBurgerIcon = () => <img src={HamburgerIcon} alt="menu"/>;
+const CustomCrossIcon = () => <img src={CrossIcon} alt="cross"/>;
 
 function header() {
   return (
@@ -27,7 +33,7 @@ function header() {
                     <ContentLi>Discover</ContentLi>
                     <ContentLi>Docs</ContentLi>
                     <ContentLi>Blog</ContentLi>
-                    <ContentLi>About Us</ContentLi>
+                    <ContentLi>About</ContentLi>
                     <ContentLi>Contact US</ContentLi>
                 </Content>
             </div>
@@ -37,6 +43,14 @@ function header() {
                 </ConnectButton>
             </Button>
         </HeaderMenu>
+        <Menu customBurgerIcon={ <CustomBurgerIcon /> } customCrossIcon={ <CustomCrossIcon /> } right>
+            <ContentLi>Home</ContentLi>
+            <ContentLi>Discover</ContentLi>
+            <ContentLi>Docs</ContentLi>
+            <ContentLi>Blog</ContentLi>
+            <ContentLi>About</ContentLi>
+            <ContentLi>Contact US</ContentLi>
+        </Menu>
     </HeaderContainer>
   )
 }

@@ -11,17 +11,20 @@ Only use CSS/HTML JS
 
 
 
-6/4 updata:
+6/4 update:
 layout
 component modify
 Router
 
-8/19 updata:
+8/19 update:
 css in js
-swiper
+slider
 
-9/9 updata:
+9/9 update:
 RWD and CSS
 
-2024 05/02 updata;
+2024 05/02 update:
 RWD
+
+2024 6/26 update:
+Search Page

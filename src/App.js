@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.scss';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Homepage from './page/homepage';
+import SearchPage from './page/search';
 
 function App() {
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="/search" element={<SearchPage />} />
+    </Routes>
   );
 }
 

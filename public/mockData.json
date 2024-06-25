@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Hamlet Contemplates ...",
+    "username": "SalvadorDali",
+    "price": "4.89",
+    "image": "/assets/image/item/NFT-item.png"
+  },
+  {
+    "id": 2,
+    "name": "ThePersistenceOfMemory",
+    "username": "VincentVanGogh",
+    "price": "5.29",
+    "image": "/assets/image/item/NFT-item.png"
+  },
+  {
+    "id": 3,
+    "name": "MonaLisa",
+    "username": "LeonardoDaVinci",
+    "price": "6.75",
+    "image": "/assets/image/item/NFT-item.png"
+  },
+  {
+    "id": 4,
+    "name": "StarryNight",
+    "username": "ClaudeMonet",
+    "price": "4.50",
+    "image": "/assets/image/item/NFT-item.png"
+  },
+  {
+    "id": 5,
+    "name": "Night",
+    "username": "Rembrandt",
+    "price": "7.25",
+    "image": "/assets/image/item/NFT-item.png"
+  },
+  {
+    "id": 6,
+    "name": "Scream",
+    "username": "EdvardMunch",
+    "price": "5.89",
+    "image": "/assets/image/item/NFT-item.png"
+  },
+  {
+    "id": 7,
+    "name": "Issus",
+    "username": "PabloPicasso",
+    "price": "6.99",
+    "image": "/assets/image/item/NFT-item.png"
+  },
+  {
+    "id": 8,
+    "name": "Cat",
+    "username": "GustavKlimt",
+    "price": "5.49",
+    "image": "/assets/image/item/NFT-item.png"
+  },
+  {
+    "id": 9,
+    "name": "Ben",
+    "username": "SandroBotticelli",
+    "price": "7.99",
+    "image": "/assets/image/item/NFT-item.png"
+  },
+  {
+    "id": 10,
+    "name": "Aleng",
+    "username": "HieronymusBosch",
+    "price": "6.49",
+    "image": "/assets/image/item/NFT-item.png"
+  }
+]

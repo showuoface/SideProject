@@ -6,11 +6,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #02050E;
 }
+
+// html, body {
+//   height: 100%;
+//   margin: 0;
+// }
 
 #root {
   box-sizing: border-box;
-  background-color: #02050E;
   width: 100%;
   padding: 20px 10%;
   @media (max-width: 1024px) and (min-width: 768px) {
@@ -25,4 +30,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+footer {
+  flex-shrink: 0;
 }

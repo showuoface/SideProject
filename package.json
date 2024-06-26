@@ -2,7 +2,7 @@
   "name": "sideproject",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://showuoface.github.io/SiteProject",
+  "homepage": "https://showuoface.github.io/side-project",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

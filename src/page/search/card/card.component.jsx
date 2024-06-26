@@ -3,6 +3,7 @@ import './card.styles.scss';
 
 const Card = ({ persons }) => {
   const { image, name, username, price } = persons;
+  const fullImagePath = `${process.env.PUBLIC_URL}${image}`;
   return (
     <div
       className="card-container"
@@ -10,7 +11,7 @@ const Card = ({ persons }) => {
     >
       <img
           alt={name}
-          src={image}
+          src={fullImagePath}
       />
       <div className='info-box'>
         <div className='title'>

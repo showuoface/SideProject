@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/side-project/static/css/main.dd8b3ac5.css",
-    "main.js": "/side-project/static/js/main.718c9f53.js",
+    "main.js": "/side-project/static/js/main.a942d317.js",
     "static/js/787.3318440f.chunk.js": "/side-project/static/js/787.3318440f.chunk.js",
     "static/media/panda-logo.svg": "/side-project/static/media/panda-logo.e75638c0d4b4475b9bd15180068d95e1.svg",
     "static/media/NFT-item.png": "/side-project/static/media/NFT-item.24024fd515af52490ce4.png",
@@ -13,11 +13,11 @@
     "index.html": "/side-project/index.html",
     "static/media/facebook-icon.svg": "/side-project/static/media/facebook-icon.dd5ef70954a6f2978a2fc5be5d2b30e9.svg",
     "main.dd8b3ac5.css.map": "/side-project/static/css/main.dd8b3ac5.css.map",
-    "main.718c9f53.js.map": "/side-project/static/js/main.718c9f53.js.map",
+    "main.a942d317.js.map": "/side-project/static/js/main.a942d317.js.map",
     "787.3318440f.chunk.js.map": "/side-project/static/js/787.3318440f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dd8b3ac5.css",
-    "static/js/main.718c9f53.js"
+    "static/js/main.a942d317.js"
   ]
 }

@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/siteproject/static/css/main.dd8b3ac5.css",
-    "main.js": "/siteproject/static/js/main.27ae98e8.js",
-    "static/js/787.3318440f.chunk.js": "/siteproject/static/js/787.3318440f.chunk.js",
-    "static/media/panda-logo.svg": "/siteproject/static/media/panda-logo.e75638c0d4b4475b9bd15180068d95e1.svg",
-    "static/media/NFT-item.png": "/siteproject/static/media/NFT-item.24024fd515af52490ce4.png",
-    "static/media/cross.png": "/siteproject/static/media/cross.f0a470098d46caa88834.png",
-    "static/media/menu.png": "/siteproject/static/media/menu.8258762727e9960d2461.png",
-    "static/media/instagram-icon.svg": "/siteproject/static/media/instagram-icon.d678f994c980273bdb63640ce5079194.svg",
-    "static/media/create-and-sell-icon.svg": "/siteproject/static/media/create-and-sell-icon.c2cef2d73909d0b2ef6678ace2cd5814.svg",
-    "static/media/twitter-icon.svg": "/siteproject/static/media/twitter-icon.9ec437d2be22f661146cfee57efcaa1c.svg",
-    "index.html": "/siteproject/index.html",
-    "static/media/facebook-icon.svg": "/siteproject/static/media/facebook-icon.dd5ef70954a6f2978a2fc5be5d2b30e9.svg",
-    "main.dd8b3ac5.css.map": "/siteproject/static/css/main.dd8b3ac5.css.map",
-    "main.27ae98e8.js.map": "/siteproject/static/js/main.27ae98e8.js.map",
-    "787.3318440f.chunk.js.map": "/siteproject/static/js/787.3318440f.chunk.js.map"
+    "main.css": "/SiteProject/static/css/main.dd8b3ac5.css",
+    "main.js": "/SiteProject/static/js/main.b4f01e10.js",
+    "static/js/787.3318440f.chunk.js": "/SiteProject/static/js/787.3318440f.chunk.js",
+    "static/media/panda-logo.svg": "/SiteProject/static/media/panda-logo.e75638c0d4b4475b9bd15180068d95e1.svg",
+    "static/media/NFT-item.png": "/SiteProject/static/media/NFT-item.24024fd515af52490ce4.png",
+    "static/media/cross.png": "/SiteProject/static/media/cross.f0a470098d46caa88834.png",
+    "static/media/menu.png": "/SiteProject/static/media/menu.8258762727e9960d2461.png",
+    "static/media/instagram-icon.svg": "/SiteProject/static/media/instagram-icon.d678f994c980273bdb63640ce5079194.svg",
+    "static/media/create-and-sell-icon.svg": "/SiteProject/static/media/create-and-sell-icon.c2cef2d73909d0b2ef6678ace2cd5814.svg",
+    "static/media/twitter-icon.svg": "/SiteProject/static/media/twitter-icon.9ec437d2be22f661146cfee57efcaa1c.svg",
+    "index.html": "/SiteProject/index.html",
+    "static/media/facebook-icon.svg": "/SiteProject/static/media/facebook-icon.dd5ef70954a6f2978a2fc5be5d2b30e9.svg",
+    "main.dd8b3ac5.css.map": "/SiteProject/static/css/main.dd8b3ac5.css.map",
+    "main.b4f01e10.js.map": "/SiteProject/static/js/main.b4f01e10.js.map",
+    "787.3318440f.chunk.js.map": "/SiteProject/static/js/787.3318440f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dd8b3ac5.css",
-    "static/js/main.27ae98e8.js"
+    "static/js/main.b4f01e10.js"
   ]
 }

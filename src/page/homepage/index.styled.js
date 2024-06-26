@@ -80,6 +80,12 @@ export const Button = styled.button`
     padding:  10px 40px;
     border: none;
     margin: 0 auto;
+    width: fit-content;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+		transform: scale(1.05);
+	}
 `;
 export const SwiperContainer = styled.div`
     width: 100%;

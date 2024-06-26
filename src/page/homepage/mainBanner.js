@@ -21,6 +21,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { Pagination, EffectCoverflow } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 const NFTitem = 
   <div className='item'>
@@ -65,7 +66,7 @@ function MainBanner() {
           <SubTitle>
               Panda NFT is the primier marketplace for NFT, which are digital items you can truly own. Digital items have existed for a long time, but never like this.
           </SubTitle>
-          <Button>Get Started</Button>
+          <Button as={Link} to="/search">Get Started</Button>
         </TitleBox>
         <SwiperContainer>
           <Swiper

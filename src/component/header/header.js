@@ -13,6 +13,7 @@ import {
 import { slide as Menu } from 'react-burger-menu';
 import HamburgerIcon from '../../assets/image/icon/menu.png';
 import CrossIcon from '../../assets/image/icon/cross.png';
+import { Link } from 'react-router-dom';
 
 const CustomBurgerIcon = () => <img src={HamburgerIcon} alt="menu"/>;
 const CustomCrossIcon = () => <img src={CrossIcon} alt="cross"/>;
@@ -20,7 +21,7 @@ const CustomCrossIcon = () => <img src={CrossIcon} alt="cross"/>;
 function header() {
   return (
     <HeaderContainer>
-        <HeaderLogo>
+        <HeaderLogo as={Link} to="/">
             <img src={pandaLogo} className="logo" alt="logo"/>
             <Logo>
                 HomeWork NFT

@@ -22,6 +22,8 @@ export const HeaderLogo = styled.div`
     display: flex;
     gap: 10px;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
     @media (max-width: 1024px) and (min-width: 768px){
         width: 100%;
         justify-content: center;

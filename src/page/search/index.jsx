@@ -12,9 +12,15 @@ export default function SearchPage() {
 	const [inputValue, setInputValue] = useState('');
 
 	useEffect(() => {
-		fetch('/build/mockData.json')
-			.then((response) => response.json())
-			.then((users) => setPersons(users));
+		fetch('/mockData.json')
+		  .then((response) => {
+			if (!response.ok) {
+			  throw new Error('Network response was not ok');
+			}
+			return response.json();
+		  })
+		  .then((users) => setPersons(users))
+		  .catch((error) => console.error('Fetch error:', error));
 	}, []);
 
 	useEffect(() => {

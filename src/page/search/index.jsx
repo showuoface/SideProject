@@ -12,7 +12,7 @@ export default function SearchPage() {
 	const [inputValue, setInputValue] = useState('');
 
 	useEffect(() => {
-		fetch('/mockData.json')
+		fetch('/build/mockData.json')
 			.then((response) => response.json())
 			.then((users) => setPersons(users));
 	}, []);

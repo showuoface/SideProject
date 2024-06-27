@@ -99,6 +99,9 @@ export const ContentLi = styled.li`
             opacity: 1;
         }
     }
+    @media (max-width: 1024px) {
+        font-size: 30px;
+    }
 `;
 
 export const ConnectButton = styled.button`

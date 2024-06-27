@@ -45,8 +45,8 @@ function header() {
             </Button>
         </HeaderMenu>
         <Menu customBurgerIcon={ <CustomBurgerIcon /> } customCrossIcon={ <CustomCrossIcon /> } right>
-            <ContentLi>Home</ContentLi>
-            <ContentLi>Discover</ContentLi>
+            <ContentLi as={Link} to="/">Home</ContentLi>
+            <ContentLi as={Link} to="/search">Discover</ContentLi>
             <ContentLi>Docs</ContentLi>
             <ContentLi>Blog</ContentLi>
             <ContentLi>About</ContentLi>

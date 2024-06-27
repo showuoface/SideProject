@@ -30,8 +30,8 @@ function header() {
         <HeaderMenu>
             <div>
                 <Content>
-                    <ContentLi>Home</ContentLi>
-                    <ContentLi>Discover</ContentLi>
+                    <ContentLi as={Link} to="/">Home</ContentLi>
+                    <ContentLi as={Link} to="/search">Discover</ContentLi>
                     <ContentLi>Docs</ContentLi>
                     <ContentLi>Blog</ContentLi>
                     <ContentLi>About</ContentLi>

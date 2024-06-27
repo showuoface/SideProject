@@ -81,6 +81,7 @@ export const ContentLi = styled.li`
     color: #ADB9C7;
     cursor: pointer;
     margin: 0 20px;
+    text-decoration: none;
     &::after {
         content: "";
         position: absolute;
